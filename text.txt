@@ -1,4 +1,3 @@
 Codify
 Testing
-Course
-Software
+Course - Software

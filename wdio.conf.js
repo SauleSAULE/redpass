@@ -1,13 +1,23 @@
 exports.config = {
   specs: ["./test/specs/**/*.js"],
   exclude: [],
-  maxInstances: 10,
+  maxInstances: 1,
   capabilities: [
     {
       maxInstances: 5,
       browserName: "chrome",
       acceptInsecureCerts: true,
+      // "goog:chromeOptions": {
+      //   args: [
+      //     "--headless",
+      //     "--disable-gpu",
+      //     "--window-size=1440,735",
+      //   ],
+      // },
     },
+    {
+      browserName: "firefox"
+    }
   ],
   logLevel: "warn",
   bail: 0,
@@ -15,7 +25,7 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services: ["chromedriver"],
+  services: ["chromedriver", "geckodriver"],
 
   framework: "mocha",
   reporters: ["spec"],

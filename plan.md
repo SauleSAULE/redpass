@@ -6,9 +6,12 @@
 - [x] Webdriver.IO
 - [x] browser object
 - [x] element object
-- [ ] Locators
-- [ ] Headless Browsers
-- [ ] Parallel Testing
+
+- [x] Locators
+- [x] Headless Browsers
+- [x] Parallel Testing
+- [x] Crossbrowsers
+
 - [ ] Page Object Patterns
 - [ ] Cucumber + BDD (Behaviour Driven Development)
 

@@ -5,11 +5,11 @@ const assert = require('node:assert')
 
 describe("My Login application", () => {
   it("should login with valid credentials", async () => {
-    await browser.url(`/login`);
+    await browser.url(`https://the-internet.herokuapp.com/login`);
     await browser.pause(1000)
 
     let username = await browser.$('#username');
-    await username.setValue('tomsmith');
+    await username.setValue('tomsmit');
 
     let password = await browser.$('#password');
     await password.setValue('SuperSecretPassword!');
@@ -27,7 +27,7 @@ describe("My Login application", () => {
         throw new Error('flash no success!')
     }
 
-    let expectedText = 'You logged into a secure area!\n×';
+    let expectedText = 'Your username is invalid!';
     let actualText = await flash.getText();
 
     await browser.pause(5000)
